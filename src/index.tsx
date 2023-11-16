@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Container } from "App.styled";
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement,
@@ -12,9 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<BrowserRouter basename="/school17/">
-			<Container>
-				<App />
-			</Container>
+			<App />
 		</BrowserRouter>{" "}
 	</React.StrictMode>,
 );

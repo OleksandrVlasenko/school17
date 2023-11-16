@@ -6,7 +6,7 @@ import { SharedLayout } from "SharedLayout/SharedLayout";
 // ----------------------------------------------------
 const MainPage = lazy(() => import("Pages/MainPage"));
 const Upravlinnya = lazy(() => import("Pages/Upravlinnya"));
-const Statut = lazy(() => import("Pages/Statut"));
+const Statut = lazy(() => import("Pages/Statut/Statut"));
 const Vchiteli = lazy(() => import("Pages/Vchiteli"));
 const GrafikPrijomu = lazy(() => import("Pages/GrafikPrijomu"));
 const OsvitnjaPrograma = lazy(() => import("Pages/OsvitnjaPrograma"));
