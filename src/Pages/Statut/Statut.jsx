@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 const Statut = () => {
+	const [link, setLink] = useState("");
+
+
+	
 	return (
 		<section>
 			<h2>Статут школи</h2>
@@ -9,6 +15,8 @@ const Statut = () => {
 			>
 				Завантажити файл
 			</a>
+
+			<form ><input type="text" /><button type="submit">Додати посилання</button></form>
 		</section>
 	);
 };
