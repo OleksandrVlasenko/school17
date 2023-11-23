@@ -5,10 +5,10 @@ const AddNewsForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [files, setFiles] = useState(null);
-  const [filesUrl, setFilesUrl] = useState([]);
+  const [filesURL, setFilesURL] = useState([]);
   // const [progress, setProgress] = useState({ started: false, pc: 0 });
   // const [msg, setMsg] = useState("");
-  const [youTubeLink, setYouTubeLink] = useState("");
+  const [youTubeURL, setYouTubeURL] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.currentTarget;
@@ -20,8 +20,8 @@ const AddNewsForm = () => {
       case "description":
         setDescription(value);
         break;
-      case "youTubeLink":
-        setYouTubeLink(value);
+      case "youTubeURL":
+        setYouTubeURL(value);
         break;
 
       default:
@@ -31,20 +31,20 @@ const AddNewsForm = () => {
 
   const handleDownloadImages = (e) => {
     const { files } = e.target;
-    const filesUrl = [];
+    const filesURL = [];
 
     for (let i = 0; i < files.length; i++) {
       const url = URL.createObjectURL(files[i]);
-      filesUrl.push(url);
+      filesURL.push(url);
     }
 
     setFiles(files);
-    setFilesUrl(filesUrl);
+    setFilesURL(filesURL);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newPost = { title, description, files, youTubeLink };
+    const newPost = { title, description, files, youTubeURL };
     const data = await newsAPI.post(newPost);
     console.log("handleSubmit  data:", data);
   };
@@ -87,17 +87,17 @@ const AddNewsForm = () => {
           />
         </label>
         {/* {files &&
-          filesUrl.map((url) => {
+          filesURL.map((url) => {
             return <img src={url} alt="1" />;
           })} */}
-        <label htmlFor="youTubeLink">
+        <label htmlFor="youTubeURL">
           Додати посилання Youtube
           <input
             onChange={handleChange}
-            value={youTubeLink}
+            value={youTubeURL}
             type="url"
-            name="youTubeLink"
-            id="youTubeLink"
+            name="youTubeURL"
+            id="youTubeURL"
           />
         </label>
         <button type="submit">Зберегти</button>
