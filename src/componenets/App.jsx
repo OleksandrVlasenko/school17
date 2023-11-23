@@ -5,8 +5,10 @@ import { SharedLayout } from "sharedLayout/SharedLayout";
 import { useDispatch } from "react-redux";
 import { refreshUser } from "redux/auth/operations/refreshUser.js";
 
-// import { PrivateRoute } from "./RedirectRoutes/PrivateRoute.jsx";
 import { PublicRoute } from "./RedirectRoutes/PublicRoute.jsx";
+import { PrivateRoute } from "./RedirectRoutes/PrivateRoute.jsx";
+
+const AddNewsForm = lazy(() => import("Pages/AddNewsForm"));
 
 const Register = lazy(() => import("Pages/AuthPages/Register"));
 const Login = lazy(() => import("Pages/AuthPages/Login"));
@@ -231,16 +233,21 @@ function App() {
           element={<ZaproshuemoNaNavchannja />}
         />
         <Route path="*" element={<MainPage />} />
-
         <Route
           path="register"
           element={
-            <PublicRoute redirectTo="/contacts" component={<Register />} />
+            <PublicRoute redirectTo="/" component={<Register />} />
           }
         />
         <Route
           path="login"
-          element={<PublicRoute redirectTo="/contacts" component={<Login />} />}
+          element={<PublicRoute redirectTo="/" component={<Login />} />}
+        />
+        <Route
+          path="add-news"
+          element={
+            <PrivateRoute redirectTo="/" component={<AddNewsForm />} />
+          }
         />
       </Route>
     </Routes>

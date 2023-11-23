@@ -1,6 +1,6 @@
 import { instance } from "./instance";
 
-export const statutLink = {
+export const statutLinkAPI = {
   async get() {
     try {
       const { data } = await instance.get("/statut");

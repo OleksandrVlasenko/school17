@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { statutLink } from "api/statutApi";
+import { statutLinkAPI } from "api/statutApi";
+import { useAuth } from "hooks/useAuth";
 
 const Statut = () => {
   const [link, setLink] = useState("");
+  const { isLoggedIn } = useAuth();
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await statutLink.get();
+        const data = await statutLinkAPI.get();
         console.log("fetchData  data:", data);
         setLink(data.link);
       } catch (error) {
@@ -24,14 +26,14 @@ const Statut = () => {
   };
 
   const handleSubmit = async (e) => {
-		e.preventDefault();
-		console.log(link);
+    e.preventDefault();
+    console.log(link);
     try {
-      await statutLink.post({link});
+      await statutLinkAPI.post({ link });
       formReset();
-		} catch (error) {
-			console.log(error.message);
-		}
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   const formReset = () => {
@@ -48,12 +50,13 @@ const Statut = () => {
       >
         Завантажити файл
       </a>
-
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="link"></label>
-        <input  type="text"  id="link" />
-        <button type="submit">Додати посилання</button>
-      </form>
+      {isLoggedIn && (
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="link"></label>
+          <input type="text" id="link" />
+          <button type="submit">Додати посилання</button>
+        </form>
+      )}
     </section>
   );
 };
