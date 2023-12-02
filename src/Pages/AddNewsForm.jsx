@@ -8,7 +8,7 @@ const AddNewsForm = () => {
   const [filesURL, setFilesURL] = useState([]);
   // const [progress, setProgress] = useState({ started: false, pc: 0 });
   // const [msg, setMsg] = useState("");
-  const [youTubeURL, setYouTubeURL] = useState("");
+  const [youtubeURL, setYoutubeURL] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.currentTarget;
@@ -20,8 +20,8 @@ const AddNewsForm = () => {
       case "description":
         setDescription(value);
         break;
-      case "youTubeURL":
-        setYouTubeURL(value);
+      case "youtubeURL":
+        setYoutubeURL(value);
         break;
 
       default:
@@ -44,7 +44,15 @@ const AddNewsForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newPost = { title, description, files, youTubeURL };
+
+    const newPost = {};
+    title !== "" && (newPost.title = title);
+    description !== "" && (newPost.description = description);
+    files && (newPost.files = files);
+    youtubeURL !== "" && (newPost.youtubeURL = youtubeURL);
+
+    console.log("handleSubmit  newPost:", newPost);
+
     const data = await newsAPI.post(newPost);
     console.log("handleSubmit  data:", data);
   };
@@ -90,14 +98,14 @@ const AddNewsForm = () => {
           filesURL.map((url) => {
             return <img src={url} alt="1" />;
           })} */}
-        <label htmlFor="youTubeURL">
+        <label htmlFor="youtubeURL">
           Додати посилання Youtube
           <input
             onChange={handleChange}
-            value={youTubeURL}
+            value={youtubeURL}
             type="url"
-            name="youTubeURL"
-            id="youTubeURL"
+            name="youtubeURL"
+            id="youtubeURL"
           />
         </label>
         <button type="submit">Зберегти</button>
