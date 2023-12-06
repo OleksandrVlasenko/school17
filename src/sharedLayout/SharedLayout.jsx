@@ -288,13 +288,11 @@ export const SharedLayout = () => {
           </Navigation>
         </MainContainer>
       </Header>
-      <main>
-        <MainContainer>
-          <Suspense fallback={<div>Loading page...</div>}>
-            <Outlet />
-          </Suspense>
-        </MainContainer>
-      </main>
+      <MainContainer>
+        <Suspense fallback={<div>Loading page...</div>}>
+          <Outlet />
+        </Suspense>
+      </MainContainer>
       <footer>
         <MainContainer></MainContainer>
       </footer>

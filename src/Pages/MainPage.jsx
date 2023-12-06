@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { newsAPI } from "api/newsApi";
 import { NewsList } from "componenets/NewsList/NewsList";
 
+
 const MainPage = () => {
   const [news, setNews] = useState([]);
   const [isLoaded, setIsLoaded] = useState("false");
@@ -16,7 +17,7 @@ const MainPage = () => {
       try {
         const { data } = await newsAPI.getAll();
         console.log("getAllNews  data:", data);
-        setNews(data);
+        setNews(data.news);
         setIsLoaded("true");
       } catch (error) {
         setIsLoaded("idle");

@@ -1,15 +1,20 @@
 import { ImagesList } from "componenets/ImagesList/ImagesList";
+import { AdditionalInfo, AdditionalInfoText, Description, NewsItemStyled, Title } from "./NewsItem.styled";
 
 export const NewsItem = ({ oneNews }) => {
   const { title, description, imagesURL, youtubeURL, createdAt, owner } =
     oneNews;
   return (
-    <li>
-      <h2>{title}</h2>
-      <p>{description}</p>
+    <NewsItemStyled>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
       <ImagesList imagesURL={imagesURL} />
-      <p>{owner}</p>
-      <p>{createdAt}</p>
-    </li>
+      <AdditionalInfo>
+        <AdditionalInfoText>
+          {createdAt.slice(0, 16).split("T").join(" ")}
+        </AdditionalInfoText>
+        <AdditionalInfoText>Автор: {owner}</AdditionalInfoText>
+      </AdditionalInfo>
+    </NewsItemStyled>
   );
 };

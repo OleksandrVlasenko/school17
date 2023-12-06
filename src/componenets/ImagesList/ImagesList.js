@@ -1,18 +1,38 @@
+import { useInnerWidth } from "hooks";
+import { useEffect, useState } from "react";
+import { ImagesListStyled, ImgStyled } from "./ImagesList.styled";
+
 export const ImagesList = ({ imagesURL }) => {
+  const [imageWidth, setImageWidth] = useState(1168);
+
+  const deviceFormFactor = useInnerWidth();
+  useEffect(() => {
+    switch (deviceFormFactor) {
+      case "mobile":
+        setImageWidth(280);
+        break;
+      case "tablet":
+        setImageWidth(342);
+        break;
+      case "desktop":
+        setImageWidth(376);
+        break;
+      default:
+        break;
+    }
+  }, [deviceFormFactor]);
   return (
-    <ul>
+    <ImagesListStyled>
       {imagesURL.map(({ url, _id }) => {
-        const width = 512;
         const updateUrl = url
           .split("upload")
-          .join(`upload/f_auto/q_auto/c_scale,w_${width}`);
+          .join(`upload/f_auto/q_auto/c_scale,w_${imageWidth}`);
         return (
           <li key={_id}>
-            <img src={updateUrl} alt={_id} />
+            <ImgStyled src={updateUrl} alt={_id} />
           </li>
-        );}
-        
-      )}
-    </ul>
+        );
+      })}
+    </ImagesListStyled>
   );
 };
