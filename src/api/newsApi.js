@@ -1,10 +1,10 @@
 import { instance } from "./instance";
 
 export const newsAPI = {
-  async getAll() {
-    return await instance.get("/news")
+  async getAll(body) {
+    return await instance.get("/news", { params: body })
   },
-  async post(value) {
-    return await instance.postForm("/news", value);
+  async post(body) {
+    return await instance.postForm("/news", body);
   },
 };
