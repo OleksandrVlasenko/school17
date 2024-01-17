@@ -12,96 +12,186 @@ const AddNewsForm = lazy(() => import("Pages/AddNewsForm"));
 
 const Register = lazy(() => import("Pages/AuthPages/Register"));
 const Login = lazy(() => import("Pages/AuthPages/Login"));
-// ----------------------------------------------------
-const MainPage = lazy(() => import("Pages/MainPage"));
-const Upravlinnya = lazy(() => import("Pages/Upravlinnya"));
-const Statut = lazy(() => import("Pages/Statut/Statut"));
-const Vchiteli = lazy(() => import("Pages/Vchiteli"));
-const GrafikPrijomu = lazy(() => import("Pages/GrafikPrijomu"));
-const OsvitnjaPrograma = lazy(() => import("Pages/OsvitnjaPrograma"));
-const KadrovijSklad = lazy(() => import("Pages/KadrovijSklad"));
-const MaterialnoTekhnichnaBaza = lazy(() =>
-  import("Pages/MaterialnoTekhnichnaBaza")
+
+//Main Page ----------------------------------------------------
+const MainPage = lazy(() => import("Pages/MainPage/MainPage.jsx"));
+const IstoriyaZakladu = lazy(() =>
+  import("Pages/MainPage/IstoriyaZakladu.jsx")
 );
-const UmoviDostupnosti = lazy(() => import("Pages/UmoviDostupnosti"));
-const Vakansiji = lazy(() => import("Pages/Vakansiji"));
-// ----------------------------------------------------
-const Uchnjam = lazy(() => import("Pages/Uchnjam"));
-const Proforientacija = lazy(() => import("Pages/Proforientacija"));
-const ObdarovaniDity = lazy(() => import("Pages/ObdarovaniDity"));
-const VikhovuemoPatriota = lazy(() => import("Pages/VikhovuemoPatriota"));
-const PravovaDopomoga = lazy(() => import("Pages/PravovaDopomoga"));
-const ElektronniPidruchniki = lazy(() => import("Pages/ElektronniPidruchniki"));
-const PravilaPovedinki = lazy(() => import("Pages/PravilaPovedinki"));
-const ShkolaBezpeki = lazy(() => import("Pages/ShkolaBezpeki"));
-// ---------------------------------------------------
-const Batkam = lazy(() => import("Pages/Batkam"));
-const PidgotovkaDoShkoli = lazy(() => import("Pages/PidgotovkaDoShkoli"));
+const KadrovijSklad = lazy(() => import("Pages/MainPage/KadrovijSklad.jsx"));
+const Kontakty = lazy(() => import("Pages/MainPage/Kontakty.jsx"));
+const GrafikPrijomu = lazy(() => import("Pages/MainPage/GrafikPrijomu.jsx"));
+
+//PublichnaInformaciya------------------------------------------
+const Statut = lazy(() => import("Pages/PublichnaInformaciya/Statut.jsx"));
+const MovaOsvitnogoProcesu = lazy(() =>
+  import("Pages/PublichnaInformaciya/MovaOsvitnogoProcesu.jsx")
+);
+const StructuraNavchalnogoRoku = lazy(() =>
+  import("Pages/PublichnaInformaciya/StructuraNavchalnogoRoku.jsx")
+);
+const PravilaPriyomuDoZakladu = lazy(() =>
+  import("Pages/PublichnaInformaciya/PravilaPriyomuDoZakladu.jsx")
+);
+const OsvitnjaPrograma = lazy(() =>
+  import("Pages/PublichnaInformaciya/OsvitnjaPrograma.jsx")
+);
+const StrategiaRozvitkuShkoly = lazy(() =>
+  import("Pages/PublichnaInformaciya/StrategiaRozvitkuShkoly.jsx")
+);
+const RichnyiyZvitProDiyalnistZakladu = lazy(() =>
+  import("Pages/PublichnaInformaciya/RichnyiyZvitProDiyalnistZakladu.jsx")
+);
+const MerezhaKlasiv = lazy(() =>
+  import("Pages/PublichnaInformaciya/MerezhaKlasiv.jsx")
+);
+const Licenzija = lazy(() =>
+  import("Pages/PublichnaInformaciya/Licenzija.jsx")
+);
+const UmoviDostupnosti = lazy(() =>
+  import("Pages/PublichnaInformaciya/UmoviDostupnosti.jsx")
+);
+const TeritoriaObslugovuvania = lazy(() =>
+  import("Pages/PublichnaInformaciya/TeritoriaObslugovuvania.jsx")
+);
+const MetodichnaRobota = lazy(() =>
+  import("Pages/PublichnaInformaciya/MetodichnaRobota.jsx")
+);
+const MaterialnoTekhnichneZabezpechenia = lazy(() =>
+  import("Pages/PublichnaInformaciya/MaterialnoTekhnichneZabezpechenia.jsx")
+);
+const Vakansiji = lazy(() =>
+  import("Pages/PublichnaInformaciya/Vakansiji.jsx")
+);
+
+//ProzoristZakladu----------------------------------------------------
+const FinansoviyZvit = lazy(() =>
+  import("Pages/ProzoristZakladu/FinansoviyZvit.jsx")
+);
+const BudjetniKoshty = lazy(() =>
+  import("Pages/ProzoristZakladu/BudjetniKoshty.jsx")
+);
+const Koshtoris = lazy(() => import("Pages/ProzoristZakladu/Koshtoris.jsx"));
+const DokumentyProOsvitu = lazy(() =>
+  import("Pages/ProzoristZakladu/DokumentyProOsvitu.jsx")
+);
+const ZajavkiDoBjudzhetu = lazy(() =>
+  import("Pages/ProzoristZakladu/ZajavkiDoBjudzhetu.jsx")
+);
+const BlagodijniVneski = lazy(() =>
+  import("Pages/ProzoristZakladu/BlagodijniVneski.jsx")
+);
+const BlagodiynaDiyalnist = lazy(() =>
+  import("Pages/ProzoristZakladu/BlagodiynaDiyalnist.jsx")
+);
+const Vytraty = lazy(() => import("Pages/ProzoristZakladu/Vytraty.jsx"));
+
+//Uchniam-------------------------------------------------------------
+const DPA = lazy(() => import("Pages/Uchniam/DPA.jsx"));
+const Proforientacija = lazy(() => import("Pages/Uchniam/Proforientacija.jsx"));
+const ObdarovaniDity = lazy(() => import("Pages/Uchniam/ObdarovaniDity.jsx"));
+const PravovaDopomoga = lazy(() => import("Pages/Uchniam/PravovaDopomoga.jsx"));
+const VikhovuemoPatriota = lazy(() =>
+  import("Pages/Uchniam/VikhovuemoPatriota.jsx")
+);
+const ShkolaBezpeki = lazy(() => import("Pages/Uchniam/ShkolaBezpeki.jsx"));
+const PravilaPovedinki = lazy(() =>
+  import("Pages/Uchniam/PravilaPovedinki.jsx")
+);
+
+//Batkam ---------------------------------------------------
+const PidgotovkaDoShkoli = lazy(() =>
+  import("Pages/Batkam/PidgotovkaDoShkoli.jsx")
+);
+const BatkivskiZbori = lazy(() => import("Pages/Batkam/BatkivskiZbori.jsx"));
+const BatkivskiyKomitet = lazy(() =>
+  import("Pages/Batkam/BatkivskiyKomitet.jsx")
+);
+const UmoviPrijomu = lazy(() => import("Pages/Batkam/UmoviPrijomu.jsx"));
+const Ozdorovlennja = lazy(() => import("Pages/Batkam/Ozdorovlennja.jsx"));
 const GrupaProdovzhenogoDnja = lazy(() =>
-  import("Pages/GrupaProdovzhenogoDnja")
+  import("Pages/Batkam/GrupaProdovzhenogoDnja.jsx")
 );
-const BatkivskiZbori = lazy(() => import("Pages/BatkivskiZbori"));
-const UmoviPrijomu = lazy(() => import("Pages/UmoviPrijomu"));
-const Ozdorovlennja = lazy(() => import("Pages/Ozdorovlennja"));
-const ZhittjaShkoli = lazy(() => import("Pages/ZhittjaShkoli"));
-// ---------------------------------------------------
-const KonkursiTaOlimpiadi = lazy(() => import("Pages/KonkursiTaOlimpiadi"));
-const Gurtki = lazy(() => import("Pages/Gurtki"));
-//----------------------------------------------------
-const Finansi = lazy(() => import("Pages/Finansi"));
-const DokumentiProOsvitu = lazy(() => import("Pages/DokumentiProOsvitu"));
-const Koshtoris = lazy(() => import("Pages/Koshtoris"));
-const ZajavkiDoBjudzhetu = lazy(() => import("Pages/ZajavkiDoBjudzhetu"));
-const BlagodijniVneski = lazy(() => import("Pages/BlagodijniVneski"));
-const VitrachenoBjudzhetnikhKoshtiv = lazy(() =>
-  import("Pages/VitrachenoBjudzhetnikhKoshtiv")
+const Recomendacii = lazy(() => import("Pages/Batkam/Recomendacii.jsx"));
+
+//Bibliotela---------------------------------------------------
+const ElektronniPidruchniki = lazy(() =>
+  import("Pages/Biblioteka/ElektronniPidruchniki.jsx")
 );
-const VitrachenoBlagodijnikhKoshtiv = lazy(() =>
-  import("Pages/VitrachenoBlagodijnikhKoshtiv")
+const InternetBiblioteka = lazy(() =>
+  import("Pages/Biblioteka/InternetBiblioteka.jsx")
 );
-const BankivskiRekviziti = lazy(() => import("Pages/BankivskiRekviziti"));
-//----------------------------------------------------
-const ZvorotniiZvjazok = lazy(() => import("Pages/ZvorotniiZvjazok"));
-//----------------------------------------------------
-const UchnivskeSamovrjaduvannja = lazy(() =>
-  import("Pages/UchnivskeSamovrjaduvannja")
+const MaterialyDliaRoboty = lazy(() =>
+  import("Pages/Biblioteka/MaterialyDliaRoboty.jsx")
 );
-//----------------------------------------------------
-const NavchatysPoNovomu = lazy(() => import("Pages/NavchatysPoNovomu"));
-//----------------------------------------------------
-const Biblioteka = lazy(() => import("Pages/Biblioteka"));
-//----------------------------------------------------
-const Licenzija = lazy(() => import("Pages/Licenzija"));
-//----------------------------------------------------
-const RichnijZvit = lazy(() => import("Pages/RichnijZvit"));
-//----------------------------------------------------
-const DistancijneNavchannja = lazy(() => import("Pages/DistancijneNavchannja"));
-//----------------------------------------------------
-const PoradiPsikhologa = lazy(() => import("Pages/PoradiPsikhologa"));
-const ZapobigannjaProjavamNasilstva = lazy(() =>
-  import("Pages/ZapobigannjaProjavamNasilstva")
+const ZamovleniiaPidruchnykiv = lazy(() =>
+  import("Pages/Biblioteka/ZamovleniiaPidruchnykiv.jsx")
 );
-const StopNasilstvu = lazy(() => import("Pages/StopNasilstvu"));
-const ZahodyProtyNasilstva = lazy(() => import("Pages/ZahodyProtyNasilstva"));
-const PoradiBatkam = lazy(() => import("Pages/PoradiBatkam"));
-const PoradiUchnjam = lazy(() => import("Pages/PoradiUchnjam"));
-const NormativnaBaza = lazy(() => import("Pages/NormativnaBaza"));
-//----------------------------------------------------
-const Osoblivosti20202021nr = lazy(() =>
-  import("Pages/Osoblivosti2020_2021nr")
+
+//VykhovnaRobota----------------------------------------------------
+const TematychniTyzhni = lazy(() =>
+  import("Pages/VykhovnaRobota/TematychniTyzhni.jsx")
 );
-//----------------------------------------------------
-const Samoosvita = lazy(() => import("Pages/Samoosvita"));
-//----------------------------------------------------
-const Kharchuvannja = lazy(() => import("Pages/Kharchuvannja"));
-//----------------------------------------------------
-const Shgb = lazy(() => import("Pages/Shgb"));
-//----------------------------------------------------
-const DenVidkritikhDverej = lazy(() => import("Pages/DenVidkritikhDverej"));
-const Zustrichi = lazy(() => import("Pages/Zustrichi"));
-const Zakhodi = lazy(() => import("Pages/Zakhodi"));
-const ZaproshuemoNaNavchannja = lazy(() =>
-  import("Pages/ZaproshuemoNaNavchannja")
+const Sanbuleten = lazy(() => import("Pages/VykhovnaRobota/Sanbuleten.jsx"));
+const Samovriaduvaniia = lazy(() =>
+  import("Pages/VykhovnaRobota/Samovriaduvaniia.jsx")
+);
+const GurtkovaRobota = lazy(() =>
+  import("Pages/VykhovnaRobota/GurtkovaRobota.jsx")
+);
+
+//DystanciyneNavchaniia----------------------------------------------------
+const Nakazy = lazy(() => import("Pages/DystanciyneNavchaniia/Nakazy.jsx"));
+const RozkladUrokiv = lazy(() =>
+  import("Pages/DystanciyneNavchaniia/RozkladUrokiv.jsx")
+);
+const KorysniPosylaniia = lazy(() =>
+  import("Pages/DystanciyneNavchaniia/KorysniPosylaniia.jsx")
+);
+
+//SocialnoPsihologichnaSluzhba----------------------------------------------------
+const KryzovyiCentr = lazy(() =>
+  import("Pages/SocialnoPsihologichnaSluzhba/KryzovyiCentr.jsx")
+);
+const TelefonniGariachiLinii = lazy(() =>
+  import("Pages/SocialnoPsihologichnaSluzhba/TelefonniGariachiLinii.jsx")
+);
+const StopBuling = lazy(() =>
+  import("Pages/SocialnoPsihologichnaSluzhba/StopBuling.jsx")
+);
+const ZapobiganiiaDomashniomuNasilliu = lazy(() =>
+  import(
+    "Pages/SocialnoPsihologichnaSluzhba/ZapobiganiiaDomashniomuNasilliu.jsx"
+  )
+);
+const ZapobigannjaTorgivliLudmy = lazy(() =>
+  import("Pages/SocialnoPsihologichnaSluzhba/ZapobigannjaTorgivliLudmy.jsx")
+);
+const KorysniPorady = lazy(() =>
+  import("Pages/SocialnoPsihologichnaSluzhba/KorysniPorady.jsx")
+);
+
+//NashiPeremogy----------------------------------------------------
+const NashiPeremogy = lazy(() =>
+  import("Pages/NashiPeremogy/NashiPeremogy.jsx")
+);
+
+//Kharchuvannja----------------------------------------------------
+const Kharchuvannja = lazy(() =>
+  import("Pages/Kharchuvannja/Kharchuvannja.jsx")
+);
+
+//ShGB----------------------------------------------------
+const ShGB = lazy(() => import("Pages/ShGB/ShGB.jsx"));
+
+//ProforientaciinaRobota----------------------------------------------------
+const ProforientaciinaRobota = lazy(() =>
+  import("Pages/ProforientaciinaRobota/ProforientaciinaRobota.jsx")
+);
+
+//GromadskaPryimalna----------------------------------------------------
+const GromadskaPryimalna = lazy(() =>
+  import("Pages/GromadskaPryimalna/GromadskaPryimalna.jsx")
 );
 
 function App() {
@@ -124,120 +214,137 @@ function App() {
           />
         }
       >
-        {/* ================================================================ */}
+        {/*MainPage ================================================================ */}
         <Route index element={<MainPage />} />
-        <Route path="upravlinnya" element={<Upravlinnya />} />
-        <Route path="statut" element={<Statut />} />
-        <Route path="vchiteli" element={<Vchiteli />} />
-        <Route path="grafik_prijomu" element={<GrafikPrijomu />} />
-        <Route path="osvitnja_programa" element={<OsvitnjaPrograma />} />
+        <Route path="istoriya_zakladu" element={<IstoriyaZakladu />} />
         <Route path="kadrovij_sklad" element={<KadrovijSklad />} />
+        <Route path="kontakty" element={<Kontakty />} />
+        <Route path="grafik_prijomu" element={<GrafikPrijomu />} />
+
+        {/*PublichnaInformaciya ================================================================ */}
+        <Route path="statut" element={<Statut />} />
         <Route
-          path="materialno_tekhnichna_baza"
-          element={<MaterialnoTekhnichnaBaza />}
+          path="mova_osvitnogo_procesu"
+          element={<MovaOsvitnogoProcesu />}
         />
+        <Route
+          path="structura_navchalnogo_roku"
+          element={<StructuraNavchalnogoRoku />}
+        />
+        <Route
+          path="pravila_priyomu_do_zakladu"
+          element={<PravilaPriyomuDoZakladu />}
+        />
+        <Route path="osvitnja_programa" element={<OsvitnjaPrograma />} />
+        <Route
+          path="strategia_rozvitku_shkoly"
+          element={<StrategiaRozvitkuShkoly />}
+        />
+        <Route
+          path="richnyiy_zvit_pro_diyalnist_zakladu"
+          element={<RichnyiyZvitProDiyalnistZakladu />}
+        />
+        <Route path="merezha_klasiv" element={<MerezhaKlasiv />} />
+        <Route path="licenzija" element={<Licenzija />} />
         <Route path="umovi_dostupnosti" element={<UmoviDostupnosti />} />
+        <Route
+          path="teritoria_obslugovuvania"
+          element={<TeritoriaObslugovuvania />}
+        />
+        <Route path="metodichna_robota" element={<MetodichnaRobota />} />
+        <Route
+          path="materialno_tekhnichne_zabezpechenia"
+          element={<MaterialnoTekhnichneZabezpechenia />}
+        />
         <Route path="vakansiji" element={<Vakansiji />} />
-        {/* ================================================================ */}
-        <Route path="uchnjam" element={<Uchnjam />} />
+        {/*ProzoristZakladu ================================================================ */}
+        <Route path="finansoviy_zvit" element={<FinansoviyZvit />} />
+        <Route path="budjetni_koshty" element={<BudjetniKoshty />} />
+        <Route path="koshtoris" element={<Koshtoris />} />
+        <Route path="dokumenty_pro_osvitu" element={<DokumentyProOsvitu />} />
+        <Route path="zajavki_do_bjudzhetu" element={<ZajavkiDoBjudzhetu />} />
+        <Route path="blagodijni_vneski" element={<BlagodijniVneski />} />
+        <Route path="blagodiyna_diyalnist" element={<BlagodiynaDiyalnist />} />
+        <Route path="vytraty" element={<Vytraty />} />
+        {/*Uchniam ================================================================ */}
+        <Route path="dpa" element={<DPA />} />
         <Route path="proforientacija" element={<Proforientacija />} />
         <Route path="obdarovani_dity" element={<ObdarovaniDity />} />
-        <Route path="vikhovuemo_patriota" element={<VikhovuemoPatriota />} />
         <Route path="pravova_dopomoga" element={<PravovaDopomoga />} />
-        <Route
-          path="elektronni_pidruchniki"
-          element={<ElektronniPidruchniki />}
-        />
-        <Route path="pravila_povedinki" element={<PravilaPovedinki />} />
+        <Route path="vikhovuemo_patriota" element={<VikhovuemoPatriota />} />
         <Route path="shkola_bezpeki" element={<ShkolaBezpeki />} />
-        {/* ================================================================ */}
-        <Route path="batkam" element={<Batkam />} />
+        <Route path="pravila_povedinki" element={<PravilaPovedinki />} />
+        {/*Batkam ==================================================================== */}
         <Route path="pidgotovka_do_shkoli" element={<PidgotovkaDoShkoli />} />
+        <Route path="batkivski_zbori" element={<BatkivskiZbori />} />
+        <Route path="batkivskiy_komitet" element={<BatkivskiyKomitet />} />
+        <Route path="umovi_prijomu" element={<UmoviPrijomu />} />
+        <Route path="ozdorovlennja" element={<Ozdorovlennja />} />
         <Route
           path="grupa_prodovzhenogo_dnja"
           element={<GrupaProdovzhenogoDnja />}
         />
-        <Route path="batkivski_zbori" element={<BatkivskiZbori />} />
-        <Route path="umovi_prijomu" element={<UmoviPrijomu />} />
-        <Route path="ozdorovlennja" element={<Ozdorovlennja />} />
-        {/* ================================================================ */}
-        <Route path="zhittja_shkoli" element={<ZhittjaShkoli />} />
-        <Route path="konkursi_ta_olimpiadi" element={<KonkursiTaOlimpiadi />} />
-        <Route path="gurtki" element={<Gurtki />} />
-        {/* ================================================================ */}
-        <Route path="finansi" element={<Finansi />} />
-        <Route path="dokumenti_pro_osvitu" element={<DokumentiProOsvitu />} />
-        <Route path="koshtoris" element={<Koshtoris />} />
-        <Route path="zajavki_do_bjudzhetu" element={<ZajavkiDoBjudzhetu />} />
-        <Route path="blagodijni_vneski" element={<BlagodijniVneski />} />
+        <Route path="recomendacii" element={<Recomendacii />} />
+        {/* Biblioteka ================================================================= */}
         <Route
-          path="vitracheno_bjudzhetnikh_koshtiv"
-          element={<VitrachenoBjudzhetnikhKoshtiv />}
+          path="elektronni_pidruchniki"
+          element={<ElektronniPidruchniki />}
+        />
+        <Route path="internet_biblioteka" element={<InternetBiblioteka />} />
+        <Route path="materialy_dlia_roboty" element={<MaterialyDliaRoboty />} />
+        <Route
+          path="zamovleniia_pidruchnykiv"
+          element={<ZamovleniiaPidruchnykiv />}
+        />
+        {/* VykhovnaRobota ================================================================== */}
+        <Route path="tematychni_tyzhni" element={<TematychniTyzhni />} />
+        <Route path="sanbuleten" element={<Sanbuleten />} />
+        <Route path="samovriaduvaniia" element={<Samovriaduvaniia />} />
+        <Route path="gurtkova_robota" element={<GurtkovaRobota />} />
+
+        {/*DystanciyneNavchaniia ================================================================ */}
+        <Route path="nakazy" element={<Nakazy />} />
+        <Route path="rozklad_urokiv" element={<RozkladUrokiv />} />
+        <Route path="korysni_posylaniia" element={<KorysniPosylaniia />} />
+
+        {/*SocialnoPsihologichnaSluzhba ================================================================ */}
+        <Route path="kryzovyi_centr" element={<KryzovyiCentr />} />
+        <Route
+          path="telefonni_gariachi_linii"
+          element={<TelefonniGariachiLinii />}
+        />
+        <Route path="stop_buling" element={<StopBuling />} />
+        <Route
+          path="zapobiganiia_domashniomu_nasilliu"
+          element={<ZapobiganiiaDomashniomuNasilliu />}
         />
         <Route
-          path="vitracheno_blagodijnikh_koshtiv"
-          element={<VitrachenoBlagodijnikhKoshtiv />}
+          path="zapobigannja_torgivli_ludmy"
+          element={<ZapobigannjaTorgivliLudmy />}
         />
-        <Route path="bankivski_rekviziti" element={<BankivskiRekviziti />} />
-        {/* ================================================================ */}
-        <Route path="zvorotnii_zvjazok" element={<ZvorotniiZvjazok />} />
-        {/* ================================================================ */}
-        <Route
-          path="uchnivske_samovrjaduvannja"
-          element={<UchnivskeSamovrjaduvannja />}
-        />
-        {/* ================================================================ */}
-        <Route path="navchatys_po_novomu" element={<NavchatysPoNovomu />} />
-        {/* ================================================================ */}
-        <Route path="biblioteka" element={<Biblioteka />} />
-        {/* ================================================================ */}
-        <Route path="licenzija" element={<Licenzija />} />
-        {/* ================================================================ */}
-        <Route path="richnij_zvit" element={<RichnijZvit />} />
-        {/* ================================================================ */}
-        <Route
-          path="distancijne_navchannja"
-          element={<DistancijneNavchannja />}
-        />
-        {/* ================================================================ */}
-        <Route path="poradi_psikhologa" element={<PoradiPsikhologa />} />
-        <Route
-          path="zapobigannja_projavam_nasilstva"
-          element={<ZapobigannjaProjavamNasilstva />}
-        />
-        <Route path="stop_nasilstvu" element={<StopNasilstvu />} />
-        <Route
-          path="zahody_proty_nasilstva"
-          element={<ZahodyProtyNasilstva />}
-        />
-        <Route path="poradi_batkam" element={<PoradiBatkam />} />
-        <Route path="poradi_uchnjam" element={<PoradiUchnjam />} />
-        <Route path="normativna_baza" element={<NormativnaBaza />} />
-        {/* ================================================================ */}
-        <Route
-          path="osoblivosti_2020_2021_n_r"
-          element={<Osoblivosti20202021nr />}
-        />
-        {/* ================================================================ */}
-        <Route path="samoosvita" element={<Samoosvita />} />
-        {/* ================================================================ */}
+        <Route path="korysni_porady" element={<KorysniPorady />} />
+
+        {/*NashiPeremogy ================================================================ */}
+        <Route path="nashi_peremogy" element={<NashiPeremogy />} />
+
+        {/*Kharchuvannja ================================================================ */}
         <Route path="kharchuvannja" element={<Kharchuvannja />} />
-        {/* ================================================================ */}
-        <Route path="shgb" element={<Shgb />} />
-        {/* ================================================================ */}
-        <Route path="den_vidkritikh_dverej" element={<DenVidkritikhDverej />} />
-        <Route path="zustrichi" element={<Zustrichi />} />
-        <Route path="zakhodi" element={<Zakhodi />} />
+
+        {/*ShGB ================================================================ */}
+        <Route path="shgb" element={<ShGB />} />
+
+        {/*ProforientaciinaRobota ================================================================ */}
         <Route
-          path="zaproshuemo_na_navchannja"
-          element={<ZaproshuemoNaNavchannja />}
+          path="proforientaciina_robota"
+          element={<ProforientaciinaRobota />}
         />
+        {/*GromadskaPryimalna ================================================================ */}
+        <Route path="gromadska_pryimalna" element={<GromadskaPryimalna />} />
+
         <Route path="*" element={<MainPage />} />
         <Route
           path="register"
-          element={
-            <PublicRoute redirectTo="/" component={<Register />} />
-          }
+          element={<PublicRoute redirectTo="/" component={<Register />} />}
         />
         <Route
           path="login"
@@ -245,9 +352,7 @@ function App() {
         />
         <Route
           path="add-news"
-          element={
-            <PrivateRoute redirectTo="/" component={<AddNewsForm />} />
-          }
+          element={<PrivateRoute redirectTo="/" component={<AddNewsForm />} />}
         />
       </Route>
     </Routes>

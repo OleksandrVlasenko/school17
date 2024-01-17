@@ -28,22 +28,8 @@ export const SharedLayout = () => {
               <LinkStyled to="/">Головна сторінка+</LinkStyled>
               <SubList>
                 <li>
-                  <SubLinkStyled to="upravlinnya">Управління</SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="statut">Статут</SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="vchiteli">Вчителі</SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="grafik_prijomu">
-                    Графік прийому
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="osvitnja_programa">
-                    Освітня програма
+                  <SubLinkStyled to="istoriya_zakladu">
+                    Історія закладу
                   </SubLinkStyled>
                 </li>
                 <li>
@@ -52,13 +38,77 @@ export const SharedLayout = () => {
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="materialno_tekhnichna_baza">
-                    Матеріально-технічна база
+                  <SubLinkStyled to="kontakty">Контакти</SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="grafik_prijomu">
+                    Графік прийому громадян
+                  </SubLinkStyled>
+                </li>
+              </SubList>
+            </DropDownListContainer>
+            <DropDownListContainer>
+              <LinkStyled to="/">Публічна інформація</LinkStyled>
+              <SubList>
+                <li>
+                  <SubLinkStyled to="statut">Статут школи</SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="mova_osvitnogo_procesu">
+                    Мова освітнього процесу
                   </SubLinkStyled>
                 </li>
                 <li>
+                  <SubLinkStyled to="structura_navchalnogo_roku">
+                    Структура навчального року
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="pravila_priyomu_do_zakladu">
+                    Правила прийому до закладу
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="osvitnja_programa">
+                    Освітні програми, навчальний рік
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="strategia_rozvitku_shkoly">
+                    Стратегія розвитку школи на 2021-2025 роки
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="richnyiy_zvit_pro_diyalnist_zakladu">
+                    Річний звіт про діяльність закладу
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="merezha_klasiv">
+                    Мережа класів
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="licenzija">Ліцензія</SubLinkStyled>
+                </li>
+                <li>
                   <SubLinkStyled to="umovi_dostupnosti">
-                    Умови доступності
+                    Умови доступності закладу освіти для навчання осіб з ООП
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="teritoria_obslugovuvania">
+                    Територія обслуговування
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="metodichna_robota">
+                    Методична робота
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="materialno_tekhnichne_zabezpechenia">
+                    Матеріально технічне забезпечення
                   </SubLinkStyled>
                 </li>
                 <li>
@@ -67,96 +117,25 @@ export const SharedLayout = () => {
               </SubList>
             </DropDownListContainer>
             <DropDownListContainer>
-              <LinkStyled to="uchnjam">Учням+</LinkStyled>
+              <LinkStyled to="/">Прозорість закладу</LinkStyled>
               <SubList>
                 <li>
-                  <SubLinkStyled to="proforientacija">
-                    Профорієнтація
+                  <SubLinkStyled to="finansoviy_zvit">
+                    Фінансовий звіт
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="obdarovani_dity">
-                    Обдаровані діти
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="vikhovuemo_patriota">
-                    Виховуємо патріота
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="pravova_dopomoga">
-                    Правова допомога
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="elektronni_pidruchniki">
-                    Електронні підручники
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="pravila_povedinki">
-                    Правила поведінки
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="shkola_bezpeki">
-                    Школа безпеки
-                  </SubLinkStyled>
-                </li>
-              </SubList>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="batkam">Батькам+</LinkStyled>
-              <SubList>
-                <li>
-                  <SubLinkStyled to="pidgotovka_do_shkoli">
-                    Підготовка до школи
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="grupa_prodovzhenogo_dnja">
-                    Група продовженого дня
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="batkivski_zbori">
-                    Батьківські збори
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="umovi_prijomu">
-                    Умови прийому
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="ozdorovlennja">Оздоровлення</SubLinkStyled>
-                </li>
-              </SubList>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="zhittja_shkoli">Життя школи+</LinkStyled>
-              <SubList>
-                <li>
-                  <SubLinkStyled to="konkursi_ta_olimpiadi">
-                    Конкурси та олімпіади
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="gurtki">Гуртки</SubLinkStyled>
-                </li>
-              </SubList>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="finansi">Фінанси+</LinkStyled>
-              <SubList>
-                <li>
-                  <SubLinkStyled to="dokumenti_pro_osvitu">
-                    Документи про освіту
+                  <SubLinkStyled to="budjetni_koshty">
+                    Бюджетні кошти
                   </SubLinkStyled>
                 </li>
                 <li>
                   <SubLinkStyled to="koshtoris">Кошторис</SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="dokumenty_pro_osvitu">
+                    Документи про освіту
+                  </SubLinkStyled>
                 </li>
                 <li>
                   <SubLinkStyled to="zajavki_do_bjudzhetu">
@@ -169,94 +148,190 @@ export const SharedLayout = () => {
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="vitracheno_bjudzhetnikh_koshtiv">
-                    Витрати
+                  <SubLinkStyled to="blagodiyna_diyalnist">
+                    Благодійна діяльність
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="vitracheno_blagodijnikh_koshtiv">
-                    Витрати
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="bankivski_rekviziti">
-                    Банківські реквізити
-                  </SubLinkStyled>
+                  <SubLinkStyled to="vytraty">Витрати</SubLinkStyled>
                 </li>
               </SubList>
             </DropDownListContainer>
             <DropDownListContainer>
-              <LinkStyled to="zvorotnii_zvjazok">Зворотній зв'язок</LinkStyled>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="uchnivske_samovrjaduvannja">
-                Учнівське самоврядування
-              </LinkStyled>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="navchatys_po_novomu">
-                Навчатись по новому
-              </LinkStyled>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="biblioteka">Бібліотека</LinkStyled>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="licenzija">Ліцензія</LinkStyled>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="richnij_zvit">Річний звіт</LinkStyled>
-            </DropDownListContainer>
-            <DropDownListContainer>
-              <LinkStyled to="distancijne_navchannja">
-                Дистанційне навчання
-              </LinkStyled>
-            </DropDownListContainer>
-
-            <DropDownListContainer>
-              <LinkStyled to="poradi_psikhologa">
-                Соціально-псилологічна служба+
-              </LinkStyled>
+              <LinkStyled to="/">Учням</LinkStyled>
               <SubList>
                 <li>
-                  <SubLinkStyled to="dokzapobigannja_projavam_nasilstvaumenti_pro_osvitu">
-                    Стоп! Булінг
+                  <SubLinkStyled to="dpa">ДПА</SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="proforientacija">
+                    Профорієнтація
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="stop_nasilstvu">
-                    Стоп насильству!
+                  <SubLinkStyled to="obdarovani_dity">
+                    Обдаровані діти
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="zahody_proty_nasilstva">
-                    Заходи
+                  <SubLinkStyled to="pravova_dopomoga">
+                    Правова допомога
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="poradi_batkam">
-                    Поради батькам
+                  <SubLinkStyled to="vikhovuemo_patriota">
+                    Виховуємо патріота
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="poradi_uchnjam">
-                    Поради учням
+                  <SubLinkStyled to="shkola_bezpeki">
+                    Школа безпеки
                   </SubLinkStyled>
                 </li>
                 <li>
-                  <SubLinkStyled to="normativna_baza">
-                    Нормативна база
+                  <SubLinkStyled to="pravila_povedinki">
+                    Правила поведінки
                   </SubLinkStyled>
                 </li>
               </SubList>
             </DropDownListContainer>
             <DropDownListContainer>
-              <LinkStyled to="osoblivosti_2020_2021_n_r">
-                Особливості 2022-2023 н.р.
-              </LinkStyled>
+              <LinkStyled to="/">Батькам</LinkStyled>
+              <SubList>
+                <li>
+                  <SubLinkStyled to="pidgotovka_do_shkoli">
+                    Підготовка до школи
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="batkivski_zbori">
+                    Батьківські збори
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="batkivskiy_komitet">
+                    Батьківський комітет
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="umovi_prijomu">
+                    Умови прийому
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="ozdorovlennja">Оздоровлення</SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="grupa_prodovzhenogo_dnja">
+                    Група продовженого дня
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="recomendacii">Рекомендації</SubLinkStyled>
+                </li>
+              </SubList>
             </DropDownListContainer>
             <DropDownListContainer>
-              <LinkStyled to="samoosvita">Самоосвіта</LinkStyled>
+              <LinkStyled to="/">Шкільна бібліотека</LinkStyled>
+              <SubList>
+                <li>
+                  <SubLinkStyled to="elektronni_pidruchniki">
+                    Електронні підручники
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="internet_biblioteka">
+                    Інтернет бібліотека
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="materialy_dlia_roboty">
+                    Матеріали для роботи
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="zamovleniia_pidruchnykiv">
+                    Замовлення підручників
+                  </SubLinkStyled>
+                </li>
+              </SubList>
+            </DropDownListContainer>
+            <DropDownListContainer>
+              <LinkStyled to="/">Виховна робота</LinkStyled>
+              <SubList>
+                <li>
+                  <SubLinkStyled to="tematychni_tyzhni">
+                    Тематичні тижні, місячники
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="sanbuleten">Санбюлетень</SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="samovriaduvaniia">
+                    Самоврядування
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="gurtkova_robota">
+                    Гурткова робота
+                  </SubLinkStyled>
+                </li>
+              </SubList>
+            </DropDownListContainer>
+            <DropDownListContainer>
+              <LinkStyled to="/">Дистанційне навчання</LinkStyled>
+              <SubList>
+                <li>
+                  <SubLinkStyled to="nakazy">Накази</SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="rozklad_urokiv">
+                    Розклад уроків
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="korysni_posylaniia">
+                    Корисні посилання
+                  </SubLinkStyled>
+                </li>
+              </SubList>
+            </DropDownListContainer>
+            <DropDownListContainer>
+              <LinkStyled to="/">Соціально психологічна служба</LinkStyled>
+              <SubList>
+                <li>
+                  <SubLinkStyled to="kryzovyi_centr">
+                    Кризовий центр
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="telefonni_gariachi_linii">
+                    Телефонні "гарячі лінії"
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="stop_buling">STOP булінг</SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="zapobiganiia_domashniomu_nasilliu">
+                    Запобігання домашньому насиллю
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="zapobigannja_torgivli_ludmy">
+                    Запобігання та протидія торгівлі людьми
+                  </SubLinkStyled>
+                </li>
+                <li>
+                  <SubLinkStyled to="korysni_porady">
+                    Корисні поради
+                  </SubLinkStyled>
+                </li>
+              </SubList>
+            </DropDownListContainer>
+            <DropDownListContainer>
+              <LinkStyled to="nashi_peremogy">Наші перемоги</LinkStyled>
             </DropDownListContainer>
             <DropDownListContainer>
               <LinkStyled to="kharchuvannja">Харчування</LinkStyled>
@@ -265,25 +340,14 @@ export const SharedLayout = () => {
               <LinkStyled to="shgb">ШГБ</LinkStyled>
             </DropDownListContainer>
             <DropDownListContainer>
-              <LinkStyled to="/">Профорієнтація+</LinkStyled>
-              <SubList>
-                <li>
-                  <SubLinkStyled to="den_vidkritikh_dverej">
-                    День відкритих вдерей
-                  </SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="zustrichi">Зустрічі</SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="zakhodi">Заходи</SubLinkStyled>
-                </li>
-                <li>
-                  <SubLinkStyled to="zaproshuemo_na_navchannja">
-                    Запрошуємо на навчання
-                  </SubLinkStyled>
-                </li>
-              </SubList>
+              <LinkStyled to="proforientaciina_robota">
+                Профорієнтаційна робота
+              </LinkStyled>
+            </DropDownListContainer>
+            <DropDownListContainer>
+              <LinkStyled to="gromadska_pryimalna">
+                Громадська приймальна
+              </LinkStyled>
             </DropDownListContainer>
           </Navigation>
         </MainContainer>
